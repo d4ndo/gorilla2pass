@@ -44,7 +44,7 @@ gorilla2pass.sh is appending the ```title``` as subdirectory. Assuming that the 
 
 My favorite organisation : Parent dir holding the url. Username containing the password. 
 
-Any information stored as notes is added as multiline password:
+Any information stored as ```notes``` is added as multiline password:
 
 + first line = password, 
 + underneath = notes.
