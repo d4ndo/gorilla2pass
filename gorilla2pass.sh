@@ -14,8 +14,8 @@ cat "$gorillacontainer" | sed -n '1!p' | while IFS="," read -r uuid group title 
 
 	test "$notes" != "" && password="$password\n$notes"
 	entry="$group/$user"
-	test "$appendTitle" = "TRUE" && entry="$group/$title/$user" 
+	test "$appendTitle" = "TRUE" && entry="$group/$title/$user"
 
 	echo -e "$password" | pass insert --multiline --force $entry
-	test $? && echo "Added! $entry"	
+	test $? && echo "Added! $entry"
 done
