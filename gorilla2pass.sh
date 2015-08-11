@@ -12,10 +12,10 @@ cat "$gorillacontainer" | sed -n '1!p' | while IFS="," read -r uuid group title 
 	group="$(sed -e 's/\\\./#/g' -e 's/\./\//g' -e 's/#/./g' <<< "$group")"
 	title="$(sed -e 's/$/\//' <<< "$title")"
 
-	test "$notes" != "" && password="$password $notes"
+	test "$notes" != "" && password="$password\n$notes"
 	entry="$group/$user"
 	test "$appendTitle" = "TRUE" && entry="$group/$title/$user" 
 
-	echo "$password" | pass insert --multiline --force $entry
+	echo -e "$password" | pass insert --multiline --force $entry
 	test $? && echo "Added! $entry"	
 done
