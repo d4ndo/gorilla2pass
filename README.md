@@ -49,6 +49,19 @@ Any information stored as ```notes``` is added as multiline password:
 + first line = password, 
 + underneath = notes.
 
+##Configuration
+
+To change the organisation structure a bit, the following flags can be motified:
+
+```bash
+  #Append Title to Group path
+  appendTitle="TRUE"
+  #Append URL to multiline password
+  multilineURL="FALSE"
+  #Append notes to multiline password
+  multilineNOTES="TRUE"
+```
+
 ##See also
 
 https://github.com/d4ndo/pass2gorilla
