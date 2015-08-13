@@ -51,7 +51,7 @@ Any information stored as ```notes``` is added as multiline password:
 
 ##Configuration
 
-To change the organisation structure a bit, the following flags can be motified:
+To change the organisation structure a bit, the following flags can be modified:
 
 ```bash
   #Append Title to Group path
