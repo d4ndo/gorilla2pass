@@ -60,6 +60,8 @@ To change the organisation structure a bit, the following flags can be modified:
   multilineURL="FALSE"
   #Append notes to multiline password
   multilineNOTES="TRUE"
+  #Add an own entry url
+  entryURL="FALSE"
 ```
 
 ##See also
