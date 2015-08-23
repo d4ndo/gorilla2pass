@@ -54,8 +54,8 @@ Any information stored as ```notes``` is added as multiline password:
 To change the organisation structure a bit, the following flags can be modified:
 
 ```bash
-  #Append Title to Group path
-  appendTitle="TRUE"
+  #User is used as leaf containting the password
+  leafUser="TRUE"
   #Append URL to multiline password
   multilineURL="FALSE"
   #Append notes to multiline password
