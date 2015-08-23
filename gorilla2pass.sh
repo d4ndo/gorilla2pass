@@ -3,8 +3,8 @@
 # This file is licensed under the GPLv3+. Please see LICENSE for more information.
 
 gorillacontainer="$1"
-#Append Title to Group path
-appendTitle="TRUE"
+#User is used as leaf containting the password
+leafUser="TRUE"
 #Append URL to multiline password
 multilineURL="FALSE"
 #Append notes to multiline password
@@ -21,9 +21,8 @@ cat "$gorillacontainer" | sed -n '1!p' | while IFS="," read -r uuid group title 
 	if [[ $url != "" && $multilineURL == "TRUE" ]]; then password="$password\n$url"; fi
 	if [[ $notes != "" && $multilineNOTES == "TRUE" ]]; then password="$password\n$notes"; fi
 
-	entry="$group/$user"
-        if [[ $title != "" && $appendTitle == "TRUE" ]]; then
-            password="$password\n$notes"
+        entry="$group/$title";
+        if [[ $user != "" && $leafUser == "TRUE" ]]; then
 	    entry="$group/$title/$user"
         fi
 	echo -e "$password" | pass insert --multiline --force $entry
