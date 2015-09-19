@@ -17,6 +17,25 @@ then run the script:
 ./gorilla2pass.sh ex.csv
 shred -u ex.csv
 ```
+##Recommended
+
+Do not store any password unencrypted on your hard drive. Use some ramdisk:
+
+```bash
+sudo mkdir /mnt/ramdisk
+sudo mount -t tmpfs -o size=1m tmpfs /mnt/ramdisk
+#Use password-gorilla to export
+#passwords to /mnt/ramdisk.
+#Then call the script to migrate to pass:
+./gorilla2pass.sh /mnt/ramdisk/ex.csv
+```
+
+Delete the csv file:
+
+```bash
+sudo rm /mnt/ramdisk/ex.csv
+sudo umount /mnt/ramdisk
+```
 
 ##Organisation 
 
