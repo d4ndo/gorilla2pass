@@ -1,6 +1,9 @@
 # gorilla2pass
 
 convert a password gorilla container to a pass repository.
+("Not sophisticated. To be on the safe side, please use the recommended
+version http://git.zx2c4.com/password-store/tree/contrib/importers/gorilla2pass.rb".)
+Bug reports are welcome.
 
 ##Getting started:
 
