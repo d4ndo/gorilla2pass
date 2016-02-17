@@ -27,6 +27,8 @@ Do not store any password unencrypted on your hard drive. Use some ramdisk:
 ```bash
 sudo mkdir /mnt/ramdisk
 sudo mount -t tmpfs -o size=1m tmpfs /mnt/ramdisk
+#set restrictive umask
+umask 077
 #Use password-gorilla to export
 #passwords to /mnt/ramdisk.
 #Then call the script to migrate to pass:
