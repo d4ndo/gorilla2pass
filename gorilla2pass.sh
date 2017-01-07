@@ -46,11 +46,11 @@ cat "$gorillacontainer" | sed -n "$snip" | while IFS="," read -r $parse; do
         if [[ $user != "" && $leafUser == "TRUE" ]]; then
 	    entry="$group/$title/$user"
         fi
-	echo -e "$password" | pass insert --multiline --force $entry
+	echo -e "$password" | pass insert --multiline --force "$entry"
 	test $? && echo "Added! $entry"
 	if [[ $url != "" && $entryURL == "TRUE" ]]; then
 	    entry="$group/$title/url"
-	    echo -e "$url" | pass insert --multiline --force $entry
+	    echo -e "$url" | pass insert --multiline --force "$entry"
             test $? && echo "Added! $entry"
         fi
 done
