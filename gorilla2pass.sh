@@ -3,7 +3,7 @@
 # This file is licensed under the GPLv3+. Please see LICENSE for more information.
 
 gorillacontainer="$1"
-#User is used as leaf containting the password
+#User is used as leaf containing the password
 leafUser="TRUE"
 #Append URL to multiline password (Debian universe only)
 multilineURL="FALSE"
